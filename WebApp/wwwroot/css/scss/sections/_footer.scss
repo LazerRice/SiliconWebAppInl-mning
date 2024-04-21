@@ -1,0 +1,33 @@
+footer {
+    color: #9397AD;
+    padding: 10px;
+
+    .container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .copyright {
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+
+        span {
+            display: none;
+
+            @include lg {
+                display: inline;
+            }
+        }
+    }
+}

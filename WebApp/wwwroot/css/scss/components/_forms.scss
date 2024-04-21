@@ -1,0 +1,172 @@
+form {
+    width: 100%;
+    display: flex;
+
+
+    .input-group {
+        display: grid;
+    }
+
+    .checkbox-group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+
+        input[type="checkbox"] {
+            height: 1.2rem;
+            width: 1.2rem;
+            border: 0.065rem solid red;
+        }
+
+        label {
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+
+    label {
+        margin-bottom: 0.188rem;
+        font-weight: 700;
+    }
+
+    input {
+        padding: 1rem;
+        border-radius: 0.5rem !important;
+        border: 0.065rem solid $gray-400;
+
+        &::placeholder {
+            opacity: 0.4;
+        }
+
+        &.input-validation-error {
+            border: 0.065rem solid $danger !important;
+            color: $danger;
+
+            &::placeholder {
+                color: $danger;
+            }
+        }
+    }
+
+    span {
+        &.field-validation-error {
+            position: absolute;
+            top: 0;
+            right: 0;
+            @include text-s;
+            color: $danger;
+        }
+    }
+}
+
+///// part 2
+input:not([type="checkbox"]) {
+    min-width: 300px;
+    font-size: 16px;
+    font-family: "manrope";
+    font-weight: 400 !important;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-gray-400);
+
+    &::placeholder {
+        opacity: 0.5;
+    }
+}
+
+.input-search-group {
+    position: relative;
+
+    input {
+        position: relative;
+        padding-right: 40px;
+    }
+
+    i {
+        position: absolute;
+        top: 14px;
+        right: 1rem;
+    }
+}
+
+.select {
+    position: relative;
+    min-width: 300px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000svg" viewBox="0 0 20" ><path');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+
+    .selected {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: 1px solid var(--color-gray-400);
+        cursor: pointer;
+    }
+
+    .select-option {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        border: 1px solid var(--color-gray-400);
+        z-index: 10;
+
+        .option {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background-color: var(--color-gray-400);
+        }
+    }
+}
+
+input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+}
+
+form {
+    width: 100%;
+    display: grid;
+    font-size: 16px;
+    font-weight: 400 !important;
+
+    .input-group {
+        display: grid;
+
+        input {
+            padding: 16px;
+        }
+    }
+
+    .checkbox-group {
+        input[type = checkbox] {
+            margin-right: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    button {
+        font-size: 16px;
+        font-weight: 400 !important;
+        width: 100%;
+    }
+
+    .field-validation-error {
+        font-size: 10px;
+        font-weight: 400 !important;
+        color: var(--color-danger-dark);
+        padding: 2px 5px;
+    }
+}
